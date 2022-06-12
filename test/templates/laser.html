@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="../static/js/laser.js">
+
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header"></div>
+        <div id="content"></div>
+        <div id="footer"></div>
+    </div>
+    <form id="laser_form" method="post" onsubmit="return checkLaserForm()">
+        <table border="1">
+            <tr>
+                <td>기기번호</td>
+                <td>
+                    <select id="laser_mechine" name="laser_mechine">
+                        <option value="">- -</option>
+                        <option value="laser_trp">트럼프</option>
+                        <option value="laser_ntc">N T C</option>
+                    </select>
+                    <div id="laser_mechine_error"></div>
+            </tr>
+            <tr>
+                <td>프로젝트</td>
+                <td><input type="text" id="laser_project" name="laser_project" />
+                    <div id="project_error"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>파트 넘버</td>
+                <td>
+                    <input type="text" id="laser_part_no" name="laser_part_no" />
+                    <div id="laser_part_no_error"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>작업자</td>
+                <td>
+                    <input type="text" id="laser_producer" name="laser_producer" />
+                    <div id="laser_producer_error"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>작업수량</td>
+                <td><input type="text" id="laser_qty" name="laser_qty" />
+                    <div id="laser_qty_error"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>불량수량</td>
+                <td><input type="text" id="laser_bad" name="laser_bad" />
+                    <div id="laser_bad_error"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>비고</td>
+                <td><input type="text" id="laser_memo" name="laser_memo" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
