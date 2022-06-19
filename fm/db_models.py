@@ -1,13 +1,15 @@
+from cProfile import label
 from datetime import date, datetime
-import email
 from email.policy import default
+from encodings import CodecRegistryError
 from enum import unique
+from random import choices
+from secrets import choice
 from tokenize import String
+from wsgiref.validate import validator
 from pymysql import Date
 from sqlalchemy import VARCHAR, Column, Integer, DATETIME, column
 from fm.init_db import Base
-
-
 
 class Laser(Base):
     __tablename__ = 'laser'
@@ -32,7 +34,6 @@ class Laser(Base):
         self.part_deviceNo = part_deviceNo
         self.part_qty = part_qty
         self.laser_qty = laser_qty
-
 
     def __repr__(self):
         return 'Laser %r, %r, %r, %r, %r, %r' % (self.part_id, self.part_name, self.part_worker, self.part_deviceNo, self.part_qty, self.laser_qty)

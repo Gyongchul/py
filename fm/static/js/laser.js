@@ -28,5 +28,4 @@ function checkLaserForm() {
         if(i==1) {
             return false
         }
-        iform.action="default.html";
 }

@@ -7,8 +7,10 @@ from datetime import timedelta
 
 
 app = Flask(__name__)
-#import fm.views
-import fm.models
+import fm.views
+import fm.db_models
+import fm.reg_models
+
 
 app.debug = True        # use only debug
 
@@ -21,15 +23,7 @@ app.config.update(
 
 @app.route("/ts")
 def helloWorld():
-    return render_template("default.html", title="Yongchul")
-
-@app.route("/laser")
-def laser():
-    return render_template("laser.html")
-
-@app.route("/dbconn")
-def dbconn():
-    return "Hi dbconn"
+    return render_template("laser_success.html", title="Yongchul")
 
 @app.before_first_request
 def beforeFirstRequest():
